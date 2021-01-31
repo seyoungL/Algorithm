@@ -15,7 +15,8 @@ def solution(citations):
 
 # [ zip() ]
 # list, tuple 병렬처리
-# 
+# return tuple (or list(tuple))
+#
 # ex) [sum(x) for x in zip (1,2,3), (10,20,30), (100,200,300)]
 # --> return [111,222,333]
 # -----------------------------------------------
