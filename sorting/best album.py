@@ -16,13 +16,14 @@ def solution(genres, plays):
         play_list[g].append((p,i))
         genres_cnt[g] += p
         
-    for g, p in play_list.items():
-        p.sort(key=lambda x:(-x[0], x[1]))    # [play cnt, idx], -x[0] = play cnt desc, x[1] = idx asc
-        play_list[g] = p
+    #for g, p in play_list.items():
+    #    p.sort(key=lambda x:(-x[0], x[1]))    # [play cnt, idx], -x[0] = play cnt desc, x[1] = idx asc
+    #    play_list[g] = p
         
     #genres_cnt = dict(sorted(genres_cnt.items(), key=lambda x :x[1], reverse=True))
     #for g,c in genres_cnt.items():
     for (g,c) in sorted(genres_cnt.items(), key=lambda x :x[1], reverse=True):
+        play_list[g] = sorted(play_list[g], key=lambda x:(-x[0], x[1]))
         idx = [i for p,i in play_list[g]]
         
         if(len(play_list[g]) < 2):
@@ -31,3 +32,6 @@ def solution(genres, plays):
             answer.extend(idx[:2])
     
     return answer
+
+
+    
