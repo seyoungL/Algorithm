@@ -64,7 +64,7 @@ collections.Counter({'a':3})-collections.Counter({'a':2})
 # 1. update() : counter 값 갱신
 a = collections.Counter()
 # 1) STRING
- a.update("aabc")
+a.update("aabc")
 # 결과 : {'a':2, 'b':1, 'c':1}
 # 2) DICT
 a.update({'a':2, 'b':1})
