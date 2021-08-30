@@ -13,7 +13,7 @@ def DFS(node, target, words, visited, cnt):
         if visited[idx] == 0 and len([i for i, w in enumerate(word) if w != node[i]]) == 1:
             visited[idx] = 1
             DFS(word, target, words, visited, cnt+1)
-            visited[idx] = 0
+            visited[idx] = 0      # [주의] 잊지말자. 이 부분 빼먹으면 1) log - dog - cog / 2) log - cog --> 1번 경우에서 cog visited = 1이 되어 2번 경우를 고려하지 않게 됨! 
             
 def solution(begin, target, words):
     if(begin == target or target not in words):
