@@ -26,12 +26,9 @@ def solution(genres, plays):
         play_list[g] = sorted(play_list[g], key=lambda x:(-x[0], x[1]))
         idx = [i for p,i in play_list[g]]
         
-        if(len(play_list[g]) < 2):
-            answer.extend(idx)
-        else:
-            answer.extend(idx[:2])
+        #if(len(play_list[g]) < 2):
+        #    answer.extend(idx)
+        #else:
+        answer.extend(idx[:2])
     
     return answer
-
-
-    

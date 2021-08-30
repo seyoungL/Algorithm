@@ -4,7 +4,8 @@
 def solution(numbers):
     numbers = list(map(str, numbers))
     numbers.sort(key = lambda x : x*4, reverse = True) 
-    
+
+    # return ''.join(numbers)        # 반례 ) 0,0,0,0 --> "0000" 이 아닌 0이 나와야 한다고 함
     return str(int(''.join(numbers)))
 
 
