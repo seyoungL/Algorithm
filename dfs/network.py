@@ -71,3 +71,6 @@ def solution(n, computers):
             ans += 1
 
     return ans 
+
+#-------------------------------------------------#
+# 7/18 done

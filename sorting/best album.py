@@ -32,3 +32,6 @@ def solution(genres, plays):
         answer.extend(idx[:2])
     
     return answer
+
+#-------------------------------------------------#
+# 7/18 done

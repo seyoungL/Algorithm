@@ -40,9 +40,10 @@ def BFS(node, words, visited, target):
     answer = 0
     
     while search:
-        current = search.pop()
+        current =   .pop()
         if current[0] == target:
             return current[1]
+
 
         for idx, word in enumerate(words):
             if visited[idx] == 0 and len([i for i, w in enumerate(word) if w != current[0][i]]) == 1:
@@ -58,3 +59,7 @@ def solution(begin, target, words):
     visited = [0] * l
 
     return BFS(begin, words, visited, target)
+
+
+#-------------------------------------------------#
+# 7/18 done

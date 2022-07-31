@@ -18,3 +18,7 @@ def solution(phone_book):
             return False
 
     return True
+
+
+#-------------------------------------------------#
+# 7/18 done
